@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; 
+}
+
+body {
+  background-color: #d6e9f5; 
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+  transition: background-color 0.5s ease;
+  font-family: 'Roboto', sans-serif; 
+}
+
+.app-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.form-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 48%;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.form-container:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.form-container h2 {
+  font-family: 'Playfair Display', serif; 
+  font-size: 36px;
+  font-weight: bold; 
+  color: #2c3e50;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.form-container h2:hover {
+  color: #3576d4; 
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 600;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus {
+  border-color: #4f85e3;
+  box-shadow: 0 0 5px rgba(79, 133, 227, 0.7); 
+  outline: none;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4f85e3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #3576d4;
+  transform: translateY(-3px); 
+}
+
+.preview-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 500px;
+  width: 48%;
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.preview-container:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.preview-container h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.preview-container h2:hover {
+  color: #3576d4;
+}
+.swiper-container {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.swiper-container:hover {
+  transform: scale(1.05); 
+}
+
+.image-preview {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.image-preview:hover {
+  transform: scale(1.05); 
+  opacity: 0.9; 
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #4f85e3;
+  font-size: 24px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  color: #3576d4;
+  transform: scale(1.2);
+}
+
+.swiper-container {
+  scroll-behavior: smooth;
+}
+
+.preview-box {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.preview-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.preview-box h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.preview-box p {
+  font-size: 16px;
+  color: #666;
+  margin: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.preview-box p strong {
+  font-weight: 600;
+  color: #4f85e3;
+}
+
+.preview-box p span {
+  font-weight: 500;
+  color: #333;
+}
+.preview-box p:hover {
+  color: #3576d4;
+}
+@media screen and (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .form-container,
+  .preview-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .swiper-container {
+    height: 200px;
+  }
+
+  .preview-box h3 {
+    font-size: 20px;
+  }
+
+  .preview-box p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .preview-container h2 {
+    font-size: 20px;
+  }
+
+  .preview-box h3 {
+    font-size: 18px;
+  }
+
+  .preview-box p {
+    font-size: 13px;
+  }
+}
+.carousel-inner {
+  max-height: 400px; 
+  overflow: hidden;
+}
+
+.carousel-item img {
+  object-fit: cover; 
+  height: 100%;
+  width: 100%;
+}
+
