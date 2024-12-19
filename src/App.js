@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Import Bootstrap JS
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; 
 
 function App() {
   const [formData, setFormData] = useState({
